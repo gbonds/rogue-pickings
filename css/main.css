@@ -7,8 +7,8 @@ body {
 	font-size: 1em;
 }
 
-/* General font styling */
 
+/* General font styling */
 h1,
 h2,
 h3,
@@ -35,8 +35,8 @@ p {
 	line-height: 21px;
 }
 
-/* Flexbox styling */
 
+/* Flexbox styling */
 body,
 .container,
 .top-section,
@@ -47,7 +47,7 @@ footer {
 	flex-flow: row wrap;
 }
 
-.container{
+.container {
 	max-width: 1200px;
 	width: 90%;
 }
@@ -66,6 +66,7 @@ nav ul li a,
 	flex-direction: column;
 }
 
+
 /* Header styling */
 header {
 	margin: 0 auto;
@@ -77,7 +78,7 @@ header h1 span {
 }
 
 header nav ul {
-	/* must zero out to avoid slight offcenter due to list element */
+	/* must zero out to avoid slight off-center due to list element */
 	margin: 0;
 	padding: 0;
 }
@@ -95,22 +96,14 @@ header nav ul li a{
 	color:#77a466;
 }
 
-/* Top Section styling */
 
-.main-image {
-	/* height: auto; */
-	/* float: left; */
-}
+/* Top Section styling */
 .main-image img {
 	width: 100%;
 	border-top: 3px solid #77a466;
 	border-bottom: 3px solid #77a466;
 }
 
-.main-title {
-	/* height: auto; */
-	/* float: left; */
-}
 .main-title h3 {
 	text-align: left;
 	padding: 5px 0;
@@ -122,8 +115,8 @@ header nav ul li a{
 	line-height: 25px;
 }
 
-/* Bottom Section styling */
 
+/* Bottom Section styling */
 .bottom-section {
 	margin: 0 auto;
 }
@@ -174,7 +167,7 @@ header nav ul li a{
 	line-height: 24px;
 }
 
-/*The widths are in a percentage!*/
+/* Footer styling */
 footer {
 	/* height: 50px; */
 	border-top: 3px solid #eee;
@@ -189,21 +182,37 @@ footer span {
 	font-size: .875em;
 }
 
+
+/* Tablet styling */
 @media all and (min-width:768px) {
-	/* Tablet styles here */
 	.bottom-section {
 		display: flex;
 		justify-content: center;
 		align-items: start;
 		flex-flow: row wrap;
+		border-top: 1px solid #eee;
 	}
 	
 	.section-one,
 	.section-two,
 	.section-three {
-	width: 33%;
+	width: 28%;
 	height: 100%;
-	border-top: 1px solid #eee;
+	border: none; /*this clears the top border inherited from mobile version*/
+	}
+
+	.section-one {
+		padding-right: 20px;
+	}
+
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+		padding: 0 20px; /*left and right padding for middle section*/
+	}
+
+	.section-three {
+		padding-left: 20px;
 	}
 
 }
