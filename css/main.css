@@ -129,24 +129,6 @@ header nav ul li a{
 	padding-top: 10px;
 }
 
-/* moving this to tablet and desktop 
-.section-one h4 {
-	padding: 10px 0;
-} 
-
-
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
-
-
-.section-two h4,
-.section-three h4 {
-	padding: 10px 30px;
-}
-*/
-
 .menu {
 	list-style: none;
 	padding: 0;
@@ -187,8 +169,8 @@ footer span {
 @media all and (min-width:768px) {
 	.bottom-section {
 		display: flex;
-		justify-content: center;
-		align-items: start;
+		justify-content: space-between;
+		align-items: flex-start;
 		flex-flow: row wrap;
 		border-top: 1px solid #eee;
 	}
@@ -196,28 +178,48 @@ footer span {
 	.section-one,
 	.section-two,
 	.section-three {
-	width: 28%;
+	width: 29.25%;
 	height: 100%;
 	border: none; /*this clears the top border inherited from mobile version*/
 	}
 
+	/* all sections have 15px padding-top so that section-two header lines up with other section headers */
 	.section-one {
-		padding-right: 20px;
+		padding: 15px 20px 0 0;
 	}
 
 	.section-two {
 		border-left: 1px solid #eee;
 		border-right: 1px solid #eee;
-		padding: 0 20px; /*left and right padding for middle section*/
+		padding: 15px 20px 0 20px; /*left and right padding for middle section*/
 	}
 
 	.section-three {
-		padding-left: 20px;
+		padding: 15px 0 0 20px;
+	}
+
+	footer {
+		margin-top: 30px;
 	}
 
 }
 
-@media all and (min-width: 1200px) {
-	/* Desktop styles here */
 
+/* Desktop styling */
+@media all and (min-width: 1200px) {
+	header {
+		display: flex;
+		align-items: center;
+	}
+	
+	header {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	} 
 }
